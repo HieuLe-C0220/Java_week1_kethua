@@ -1,37 +1,37 @@
 public class Rectangle extends Shape {
     private double width = 1.0;
-    private double height = 1.0;
+    private double length = 1.0;
     protected Rectangle() {
     }
-    protected Rectangle(double width,double height) {
+    protected Rectangle(double width,double length) {
         this.width = width;
-        this.height = height;
+        this.length = length;
     }
-    public Rectangle(double width,double height,String color,boolean filled) {
+    public Rectangle(double width,double length,String color,boolean filled) {
         super(color, filled);
         this.width = width;
-        this.height = height;
+        this.length = length;
     }
     public double getWidth() {
         return this.width;
     }
-    public double getHeight() {
-        return height;
+    public double getLength() {
+        return length;
     }
     public void setWidth(double width) {
         this.width = width;
     }
-    public void setHeight(double height) {
-        this.height = height;
+    public void setLength(double length) {
+        this.length = length;
     }
     public double getArea() {
-        return this.width*this.height;
+        return this.width*this.length;
     }
     public double getPerimeter() {
-        return (this.height+this.width)*2;
+        return (this.length +this.width)*2;
     }
     @Override
     public String toString() {
-        return "A Circle with width = "+ getWidth()+" and "+getHeight()+", which is a subclass of "+super.toString();
+        return "A Rectangle with width = "+ getWidth()+" and "+ getLength()+", which is a subclass of "+super.toString();
     }
 }
